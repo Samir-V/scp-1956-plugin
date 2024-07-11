@@ -24,7 +24,7 @@ namespace Scp1956Plugin
                 return;
             }
 
-            player.Role.Set(RoleTypeId.ClassD, Exiled.API.Enums.SpawnReason.ForceClass);
+            //player.Role.Set(RoleTypeId.ClassD, Exiled.API.Enums.SpawnReason.ForceClass);
             player.Scale = Scp1956Plugin.PluginConfig.Scale;
             player.Health = Scp1956Plugin.PluginConfig.Health;
             player.ClearInventory();
@@ -145,6 +145,10 @@ namespace Scp1956Plugin
             {
                 var item = Item.Create(creationType);
                 item.CreatePickup(playerPos);
+
+                Scp1956Plugin.PluginConfig.CreateValues.TryGetValue(creationType, out int itemValue);
+
+                player.SessionVariables[GnomeScoreKey] = player.GetGnomeScore() - itemValue;
             }
 
             return true;

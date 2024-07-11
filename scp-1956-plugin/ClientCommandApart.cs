@@ -18,7 +18,7 @@ namespace Scp1956Plugin
         public string[] Aliases { get; } = new string[0];
 
         /// <inheritdoc/>
-        public string Description { get; } = "A simple test command.";
+        public string Description { get; } = "Разбор предмета гномьей магией";
 
         /// <inheritdoc />
         public bool SanitizeResponse { get; }

@@ -42,6 +42,7 @@ namespace Scp1956Plugin
 
             player.SessionVariables[GnomeKey] = false;
             player.SessionVariables[GnomeScoreKey] = 0;
+            player.Scale = new Vector3(1.0f, 1.0f, 1.0f);
         }
 
         public static bool IsGnome(this Player player)
@@ -82,6 +83,12 @@ namespace Scp1956Plugin
             }
 
             var currentItem = player.CurrentItem;
+
+            if (currentItem is null)
+            {
+                return false;
+            }
+
             var itemType = currentItem.Base.ItemTypeId;
 
             if (!Scp1956Plugin.PluginConfig.ApartValues.TryGetValue(itemType, out int value))

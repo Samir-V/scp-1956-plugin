@@ -1,10 +1,6 @@
 ﻿using CommandSystem;
 using Exiled.API.Features;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Scp1956Plugin
 {
@@ -17,7 +13,7 @@ namespace Scp1956Plugin
         public string[] Aliases { get; } = new string[0];
 
         /// <inheritdoc/>
-        public string Description { get; } = "Создание случайного предмета гномьей магиией";
+        public string Description { get; } = "Создание случайного предмета гномьей магией";
 
         /// <inheritdoc />
         public bool SanitizeResponse { get; }

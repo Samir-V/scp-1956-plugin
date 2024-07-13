@@ -89,14 +89,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminCommands.cs" />
-    <Compile Include="ClientCommandApart.cs" />
-    <Compile Include="ClientCommandCreate.cs" />
+    <Compile Include="Commands\AdminCommands.cs" />
+    <Compile Include="Commands\ClientCommandApart.cs" />
+    <Compile Include="Commands\ClientCommandCreate.cs" />
+    <Compile Include="Commands\ClientCommandScore.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="GnomeUtils.cs" />
     <Compile Include="PlayerHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scp1956Plugin.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,7 +28,7 @@ namespace Scp1956Plugin
 
         public override PluginPriority Priority { get; } = PluginPriority.Default;
 
-        public override System.Version Version { get; } = new System.Version(1, 0, 1);
+        public override System.Version Version { get; } = new System.Version(1, 0, 2);
 
         public override void OnEnabled()
         {
